@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="90px" height="100px" viewBox="0 0 90 100" xml:space="preserve">
+<rect x="12.35" y="22.792" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="65.301" height="54.416"/>
+<g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="50.166" y1="35" x2="38.75" y2="35"/>
+	<g>
+		<polygon fill="#FFFFFF" points="46.852,30.91 46.17,31.643 49.781,34.999 46.17,38.356 46.852,39.089 51.25,34.999"/>
+	</g>
+</g>
+<g>
+	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="51.25" y1="66" x2="39.834" y2="66"/>
+	<g>
+		<polygon fill="#FFFFFF" points="43.148,61.91 43.83,62.643 40.218,65.999 43.83,69.356 43.148,70.089 38.75,65.999"/>
+	</g>
+</g>
+<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="45" cy="50" r="43.5"/>
+</svg>

@@ -1,0 +1,211 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #2c3135;
+	color: #c5d3d6;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #c5d3d6;
+}
+
+.js .codrops-header,
+.js .codrops-top {
+	position: fixed;
+	z-index: 1000;
+}
+
+/* Header */
+.codrops-header {
+	margin: 0 auto;
+	width: 70%;
+	left: 15%;
+	top: 3.5em;
+	pointer-events: none;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.message {
+	display: none;
+	clear: both;
+	color: #f39c12;
+}
+
+.codrops-header h1 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.3;
+	padding: 1.5em 0 0.25em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	float: left;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(40,49,56,0.95);
+	z-index: 10000;
+}
+
+.no-js .overlay, 
+.overlay.hide {
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
+	visibility: hidden;
+}
+
+.info {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 80%;
+	width: 100%;
+}
+
+.info span {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	padding: 10px;
+	margin: 4px;
+	text-align: center;
+	vertical-align: top;
+	background-size: 75%;
+	background-color: rgba(52,73,94,0.7);
+	background-repeat: no-repeat;
+	background-position: 50% 85%;
+}
+
+.info span.info-drag {
+	background-image: url(../img/drag.svg);
+}
+
+.info span.info-keys {
+	background-image: url(../img/keys.svg);
+}
+
+.info span.info-switch {
+	background-image: url(../img/switchmin.svg);
+	background-size: 65%;
+}
+
+.info button {
+	border: 2px solid #fff;
+	background: transparent;
+	color: #fff;
+	font-weight: bold;
+	padding: 1em 2em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	display: block;
+	margin: 1em auto;
+	opacity: 0.7;
+	outline: none;
+}
+
+.info button:hover {
+	opacity: 1;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.69em;
+	line-height: 2.2;
+	top: 0;
+	left: 0;
+}
+
+.codrops-top a {
+	display: inline-block;
+	padding: 0 1em;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	display: block;
+	float: left;
+}
+
+.codrops-icon:before {
+	margin: 0 4px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+@media screen and (max-width: 650px) {
+	.message {
+		display: block;
+	}
+	.info span.info-keys,
+	.info span.info-switch {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.info span {
+		width: 100px;
+		height: 100px;
+		font-size: 0.5em;
+	}
+}
+
+@media screen and (max-width: 25em) {
+	.codrops-icon span {
+		display: none;
+	}
+}

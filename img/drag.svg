@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="128px" height="128px" viewBox="0 0 128 128" xml:space="preserve">
+<circle fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" stroke-dasharray="2,2" cx="59.5" cy="34.5" r="14.5"/>
+<g>
+	<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="13" y1="32" x2="37" y2="32"/>
+	<g>
+		<polygon points="19.796,40.18 21.16,38.715 13.937,32.002 21.16,25.287 19.796,23.822 11,32.002" fill="#ffffff"/>
+	</g>
+</g>
+<g>
+	<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="82" y1="32" x2="106" y2="32"/>
+	<g>
+		<polygon points="99.204,40.18 97.84,38.715 105.063,32.002 97.84,25.287 99.204,23.822 108,32.002" fill="#ffffff"/>
+	</g>
+</g>
+<polygon stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" fill="rgba(255,255,255,0.1)" points="53,31 53,74 40,56 30,63 49,106 98,106 
+	98,65 70,65 67,65 67,31 "/>
+</svg>

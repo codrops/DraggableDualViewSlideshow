@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="128px" height="128px" viewBox="0 0 128 128" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<g>
+				<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="85" y1="64" x2="100" y2="64"/>
+				<g>
+					<polygon points="93.763,71.971 92.398,70.506 99.622,63.793 92.398,57.078 93.763,55.613 102.559,63.793" fill="#ffffff"/>
+				</g>
+			</g>
+			<rect x="71" y="42" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" width="45" height="44"/>
+		</g>
+		<g>
+			<g>
+				<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="44" y1="64" x2="29" y2="64"/>
+				<g>
+					<polygon points="35.237,55.611 36.602,57.076 29.378,63.789 36.602,70.504 35.237,71.969 26.441,63.789" fill="#ffffff"/>
+				</g>
+			</g>
+			<rect x="12" y="42" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" width="45" height="44"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="64" y1="37" x2="64" y2="23"/>
+			<g>
+				<polygon points="72.471,29.796 71.006,31.16 64.293,23.937 57.578,31.16 56.113,29.796 64.293,21" fill="#ffffff"/>
+			</g>
+		</g>
+		<polyline fill="none" stroke="#ffffff" stroke-width="0.5" stroke-miterlimit="10" points="33,38 33,15 95,15 95,38"/>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="64" y1="91" x2="64" y2="105"/>
+			<g>
+				<polygon points="56.111,98.204 57.576,96.84 64.289,104.063 71.004,96.84 72.469,98.204 64.289,107" fill="#ffffff"/>
+			</g>
+		</g>
+		<polyline fill="none" stroke="#ffffff" stroke-width="0.5" stroke-miterlimit="10" points="33,90 33,113 95,113 95,90"/>
+	</g>
+</g>
+</svg>
