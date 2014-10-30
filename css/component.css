@@ -105,6 +105,8 @@ button.slider-switch:hover {
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
 }
 
 .js .img-dragger-large {

@@ -121,10 +121,6 @@
 		// initialize the DragDealer plugin
 		this._initDragDealer();
 
-		// set perspective value to the main element
-		this.el.style.WebkitPerspective = this.options.perspective + 'px';
-		this.el.style.perspective = this.options.perspective + 'px';
-
 		// init events
 		this._initEvents();
 	}
@@ -296,8 +292,8 @@
 			r = this.options.slideshowRatio,
 			zAxisVal = this.isFullscreen ? p - ( p / r ) : p - p * r;
 
-		this.imgDragger.style.WebkitTransform = 'translate3d( -50%, -50%, ' + zAxisVal + 'px )';
-		this.imgDragger.style.transform = 'translate3d( -50%, -50%, ' + zAxisVal + 'px )';
+		this.imgDragger.style.WebkitTransform = 'perspective(' + this.options.perspective + 'px) translate3d( -50%, -50%, ' + zAxisVal + 'px )';
+		this.imgDragger.style.transform = 'perspective(' + this.options.perspective + 'px) translate3d( -50%, -50%, ' + zAxisVal + 'px )';
 
 		var onEndTransitionFn = function( ev ) {
 			if( support.transitions ) {
