@@ -72,7 +72,7 @@
 		onToggle : function() { return false; },
 		onToggleContent : function() { return false; },
 		onToggleContentComplete : function() { return false; }
-	}
+	};
 
 	/**
 	 * init function
@@ -123,7 +123,7 @@
 
 		// init events
 		this._initEvents();
-	}
+	};
 
 	/**
 	 * initialize the events
@@ -182,14 +182,14 @@
 				}
 			}
 		} );
-	}
+	};
 
 	/**
 	 * gets the content page of the current slide
 	 */
 	DragSlideshow.prototype._getContentPage = function( slide ) {
 		return this.pages.querySelector( 'div.content[data-content = "' + slide.getAttribute( 'data-content' ) + '"]' );
-	}
+	};
 
 	/**
 	 * show/hide content
@@ -241,7 +241,7 @@
 		else {
 			onEndTransitionFn();
 		}
-	}
+	};
 
 	/**
 	 * initialize the Dragdealer plugin
@@ -257,7 +257,7 @@
 				self._navigate( x, y );
 			}
 		});
-	}
+	};
 
 	/**
 	 * DragDealer plugin callback: update current value
@@ -267,7 +267,7 @@
 		classie.remove( this.slides[ this.current || 0 ], 'current' );
 		this.current = this.dd.getStep()[0] - 1;
 		classie.add( this.slides[ this.current ], 'current' );
-	}
+	};
 
 	/**
 	 * toggle between fullscreen and minimized slideshow
@@ -330,7 +330,7 @@
 		else {
 			onEndTransitionFn();
 		}
-	}
+	};
 
 	/**
 	 * add/remove preserve-3d to the slides (seems to fix a rendering problem in firefox)
@@ -339,7 +339,7 @@
 		this.slides.forEach( function( slide ) {
 			slide.style.transformStyle = add ? 'preserve-3d' : '';
 		});
-	}
+	};
 
 	/**
 	 * add to global namespace
