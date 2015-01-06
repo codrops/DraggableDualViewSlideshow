@@ -182,6 +182,12 @@
 				}
 			}
 		} );
+
+		// add event listeners for buttons
+		var leftButton = document.getElementById('leftButton'),
+			rightButton = document.getElementById('rightButton');
+		leftButton.addEventListener( 'click', function() { self.dd.setStep( self.current ); } );
+		rightButton.addEventListener( 'click', function() { self.dd.setStep( self.current + 2 ); } );
 	};
 
 	/**

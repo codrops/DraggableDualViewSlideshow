@@ -290,6 +290,62 @@ button.content-switch::before {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+#leftButton, #rightButton {
+	/* border: 2px solid #fff; */
+	border: none;
+	width: 50px;
+	text-indent: 200px;
+	overflow: hidden;
+	white-space: nowrap;
+	background: transparent;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	padding: 1em 2em;
+	font-size: 0.85em;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	outline: none;
+	z-index: 1000;
+	opacity: 0.7;
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
+	transition: transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
+}
+#leftButton {
+	left: 20px;
+}
+#rightButton {
+	right: 20px;
+}
+
+.no-js #leftButton, .no-js #rightButton {
+	display: none;
+}
+
+#leftButton:hover, #rightButton:hover {
+	opacity: 1;
+}
+
+#leftButton::before, #rightButton::before {
+	font-family: 'feathericons';
+	speak: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	text-indent: 0;
+	font-size: 1.5em;
+	line-height: 0.75;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+#leftButton::before {	content: '\e094'; }
+#rightButton::before {	content: '\e095'; }
+
 .show-content .current button.content-switch {
 	border-color: #c5d3d6;
 	color: #c5d3d6;
