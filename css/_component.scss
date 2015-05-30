@@ -347,8 +347,8 @@ button.content-switch::before {
 #rightButton::before {	content: '\e095'; }
 
 .show-content .current button.content-switch {
-	border-color: #c5d3d6;
-	color: #c5d3d6;
+	border-color: $codrop-teal;
+	color: $codrop-teal;
 	-webkit-transform: translate3d(-50%,100%,0);
 	transform: translate3d(-50%,100%,0);
 }

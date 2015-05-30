@@ -1,0 +1,24 @@
+
+$fonts: 'Lato', Arial, sans-serif;
+
+/* colors */
+
+$codrop-grey: #2c3135;
+$codrop-teal: #c5d3d6;
+$codrop-orange: #f39c12;
+
+$slide-bg: $codrop-grey;
+$slide-color: $codrop-teal;
+$slide-cur-color: white;
+$message-color: $codrop-orange;
+$overlay-bg-color: rgba(40,49,56,0.95);
+$button-color: white;
+$button-border: $button-color;
+
+
+/* Image URLS */
+
+$info-drag-url: url(../img/drag.svg);
+$info-keys-url: url(../img/drag.svg);
+$info-switch-url: url(../img/drag.svg);
+
