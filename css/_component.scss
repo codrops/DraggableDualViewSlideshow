@@ -33,30 +33,39 @@ html.js,
 	transition: transform 0.6s cubic-bezier(.7,0,.3,1);
 }
 
-.dragslider.show-content {
-	-webkit-transform: translate3d(0,-100%,0);
-	transform: translate3d(0,-100%,0);
-}
+.dragslider {
+	
+	&.show-content {
+		-webkit-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0);
+	}
 
-.dragslider h2 {
-	font-family: 'Playfair Display', serif;
+	h2 {
+	font-family: $dragslider-h2-font;
 	font-size: 8em;
 	font-weight: 700;
 	margin: 0 auto;
 	line-height: 1;
 	position: relative;
+	}
+
+	span {
+		display: block;
+		font-size: 27%;
+		font-family: $dragslider-span-font;
+		font-weight: 300;
+		padding-top: 0.4em;
+	}
 }
 
-.no-js .dragslider h2 {
+.no-js {
+	.dragslider h2 {
 	padding: 15px;
-}
+	}
 
-.dragslider h2 span {
-	display: block;
-	font-size: 27%;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	padding-top: 0.4em;
+	button.slider-switch {
+		display: none;
+	}
 }
 
 /* Switch button */
@@ -68,7 +77,7 @@ button.slider-switch {
 	color: transparent;
 	position: relative;
 	border: none;
-	background: url(../img/switchmin.svg) no-repeat center center;
+	background: $slider-button-bg no-repeat center center;
 	background-size: 90%;
 	float: right;
 	outline: none;
@@ -77,19 +86,14 @@ button.slider-switch {
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	pointer-events: auto;
+	&.view-maxi {
+		background-image: $slider-switch-bg;
+	}
+	*:hover {
+		opacity: 1;
+	}
 }
 
-.no-js button.slider-switch {
-	display: none;
-}
-
-button.slider-switch.view-maxi {
-	background-image: url(../img/switchmax.svg)
-}
-
-button.slider-switch:hover {
-	opacity: 1;
-}
 
 /* Dragger */
 .img-dragger {
