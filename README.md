@@ -1,4 +1,4 @@
-Draggable Dual-View Slideshow
+Angular Draggable Dual-View Slideshow
 =========
 
 A draggable slideshow with two views: fullscreen and small carousel. In fullscreen view, a related content area can be viewed.
