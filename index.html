@@ -12,6 +12,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/app.css"/>
   		<script src="js/modernizr.custom.js"></script>
+  		<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -162,28 +163,28 @@
 		<script src="js/classie.js"></script>
 		<script src="js/dragslideshow.js"></script>
 		<script>
-			(function() {
+			$(function() {
 
-				var overlay = document.getElementById( 'overlay' ),
-					overlayClose = overlay.querySelector( 'button' ),
-					header = document.getElementById( 'header' )
-					switchBtnn = header.querySelector( 'button.slider-switch' ),
+				var overlay = $("#overlay"),
+					overlayClose = $("#overlay button"),
+					header = $("#header"),
+					switchBtnn = $('#header button.slider-switch'),
 					toggleBtnn = function() {
 						if( slideshow.isFullscreen ) {
-							classie.add( switchBtnn, 'view-maxi' );
+							switchBtnn.addClass('view-maxi');
 						}
 						else {
-							classie.remove( switchBtnn, 'view-maxi' );
+							switchBtnn.removeClass('view-maxi');
 						}
 					},
 					toggleCtrls = function() {
 						if( !slideshow.isContent ) {
-							classie.add( header, 'hide' );
+							header.addClass('hide');
 						}
 					},
 					toggleCompleteCtrls = function() {
 						if( !slideshow.isContent ) {
-							classie.remove( header, 'hide' );
+							header.removeClass('hide');
 						}
 					},
 					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
@@ -199,13 +200,13 @@
 						toggleBtnn();
 					},
 					closeOverlay = function() {
-						classie.add( overlay, 'hide' );
+						overlay.addClass('hide');
 					};
 
 				// toggle between fullscreen and small slideshow
-				switchBtnn.addEventListener( 'click', toggleSlideshow );
+				switchBtnn.click(toggleSlideshow);
 				// close overlay
-				overlayClose.addEventListener( 'click', closeOverlay );
+				overlayClose.click(closeOverlay);
 
 			}());
 		</script>
