@@ -12,7 +12,7 @@
 	
 	'use strict';
 	
-	var docElem = window.document.documentElement,
+	var docElem = $("html"),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -105,7 +105,7 @@
 		this.slideshowRatio = this.options.slideshowRatio;
 
 		// add class "current" to first slide
-		classie.add( this.slides[ this.current ], 'current' );
+		$(this.slides[ this.current ]).addClass('current');
 		
 		// the pages/content
 		this.pages = this.el.querySelector( 'section.pages' );
@@ -215,7 +215,7 @@
 		if( this.isContent ) {
 			// enable the dragdealer
 			this.dd.enable();
-			classie.remove( this.el, 'show-content' );
+			$(this.el).removeClass( 'show-content' );
 		}
 		else {
 			// before: scroll all the content up
