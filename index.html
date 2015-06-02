@@ -204,10 +204,11 @@
 				$("#slideshow").fadeIn(1000);
 				// toggle between fullscreen and small slideshow
 				switchBtnn.click(toggleSlideshow);
-				// close overlay when you click the button
+				// display the ovelay if it's the first visit
 				if ($.cookie('newUser') == null) {
 					overlay.addClass('show');
-				}
+				};
+				// close overlay when you click the button
 				overlayClose.click(function(){
 					overlay.addClass('hide');
 					$.cookie('newUser', 'false', { expires: 7 });
