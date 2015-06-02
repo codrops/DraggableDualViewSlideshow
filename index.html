@@ -166,10 +166,10 @@
 		<script>
 			$(function() {
 
-				var overlay = $("#overlay"),
-					overlayClose = $("#overlay button"),
-					header = $("#header"),
-					switchBtnn = $('#header button.slider-switch'),
+				var overlay = $("#overlay");
+					overlayClose = $("#overlay button");
+					header = $("#header");
+					switchBtnn = $('#header button.slider-switch');
 					toggleBtnn = function() {
 						if( slideshow.isFullscreen ) {
 							switchBtnn.addClass('view-maxi');
@@ -177,17 +177,17 @@
 						else {
 							switchBtnn.removeClass('view-maxi');
 						}
-					},
+					};
 					toggleCtrls = function() {
 						if( !slideshow.isContent ) {
 							header.addClass('hide');
 						}
-					},
+					};
 					toggleCompleteCtrls = function() {
 						if( !slideshow.isContent ) {
 							header.removeClass('hide');
 						}
-					},
+					};
 					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
 						// toggle between fullscreen and minimized slideshow
 						onToggle : toggleBtnn,
@@ -195,12 +195,13 @@
 						onToggleContent : toggleCtrls,
 						// toggle the main image and the content view (triggered after the animation ends)
 						onToggleContentComplete : toggleCompleteCtrls
-					}),
+					});
 					toggleSlideshow = function() {
 						slideshow.toggle();
 						toggleBtnn();
 					};
 
+				$("#slideshow").fadeIn(1000);
 				// toggle between fullscreen and small slideshow
 				switchBtnn.click(toggleSlideshow);
 				// close overlay when you click the button

@@ -31,6 +31,7 @@ html.js,
 	height: 100%;
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1);
 	transition: transform 0.6s cubic-bezier(.7,0,.3,1);
+	display: none;
 }
 
 .dragslider {
