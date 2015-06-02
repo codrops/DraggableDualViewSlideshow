@@ -70,13 +70,19 @@ a {
     height: 100%;
     background-color: $overlay-bg-color;
     z-index: 10000;
+    display: none;
+}
+
+.no-js .overlay, 
+.overlay.show {
+    display: block;
 }
 
 .no-js .overlay, 
 .overlay.hide {
     -webkit-transition: opacity 0.3s, visibility 0.3s;
     transition: opacity 0.3s, visibility 0.3s;
-    visibility: hidden;
+    display: block;
 }
 
 .info {

@@ -211,13 +211,18 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(40, 49, 56, 0.95);
-  z-index: 10000; }
+  z-index: 10000;
+  display: none; }
+
+.no-js .overlay,
+.overlay.show {
+  display: block; }
 
 .no-js .overlay,
 .overlay.hide {
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
-  visibility: hidden; }
+  display: block; }
 
 .info {
   text-align: center;

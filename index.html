@@ -162,6 +162,7 @@
 		<script src="js/dragdealer.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/dragslideshow.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
 		<script>
 			$(function() {
 
@@ -198,15 +199,18 @@
 					toggleSlideshow = function() {
 						slideshow.toggle();
 						toggleBtnn();
-					},
-					closeOverlay = function() {
-						overlay.addClass('hide');
 					};
 
 				// toggle between fullscreen and small slideshow
 				switchBtnn.click(toggleSlideshow);
-				// close overlay
-				overlayClose.click(closeOverlay);
+				// close overlay when you click the button
+				if ($.cookie('newUser') == null) {
+					overlay.addClass('show');
+				}
+				overlayClose.click(function(){
+					overlay.addClass('hide');
+					$.cookie('newUser', 'false', { expires: 7 });
+				});
 
 			}());
 		</script>
