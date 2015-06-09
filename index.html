@@ -4,17 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Draggable Dual-View Slideshow</title>
+		<title>Draggable Dual-View Slideshow Fork</title>
 		<meta name="description" content="Draggable Dual-View Slideshow: A Slideshow with two views and content area" />
 		<meta name="keywords" content="draggable, slideshow, fullscreen, carousel, views, zoomed, 3d transform, perspective, dragdealer" />
-		<meta name="author" content="Codrops" />
+		<meta name="author" content="Reklino (fork from Codrops)" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
   		<script src="js/modernizr.custom.js"></script>
+  		<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -37,6 +35,8 @@
 				</div>
 			</div>
 			<div id="slideshow" class="dragslider">
+				<button id="leftButton">Prev</button>
+				<button id="rightButton">Next</button>
 				<section class="img-dragger img-dragger-large dragdealer">
 					<div class="handle">
 						<div class="slide" data-content="content-1">
@@ -162,31 +162,32 @@
 		<script src="js/dragdealer.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/dragslideshow.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
 		<script>
-			(function() {
+			$(function() {
 
-				var overlay = document.getElementById( 'overlay' ),
-					overlayClose = overlay.querySelector( 'button' ),
-					header = document.getElementById( 'header' )
-					switchBtnn = header.querySelector( 'button.slider-switch' ),
+				var overlay = $("#overlay");
+					overlayClose = $("#overlay button");
+					header = $("#header");
+					switchBtnn = $('#header button.slider-switch');
 					toggleBtnn = function() {
 						if( slideshow.isFullscreen ) {
-							classie.add( switchBtnn, 'view-maxi' );
+							switchBtnn.addClass('view-maxi');
 						}
 						else {
-							classie.remove( switchBtnn, 'view-maxi' );
+							switchBtnn.removeClass('view-maxi');
 						}
-					},
+					};
 					toggleCtrls = function() {
 						if( !slideshow.isContent ) {
-							classie.add( header, 'hide' );
+							header.addClass('hide');
 						}
-					},
+					};
 					toggleCompleteCtrls = function() {
 						if( !slideshow.isContent ) {
-							classie.remove( header, 'hide' );
+							header.removeClass('hide');
 						}
-					},
+					};
 					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
 						// toggle between fullscreen and minimized slideshow
 						onToggle : toggleBtnn,
@@ -194,19 +195,24 @@
 						onToggleContent : toggleCtrls,
 						// toggle the main image and the content view (triggered after the animation ends)
 						onToggleContentComplete : toggleCompleteCtrls
-					}),
+					});
 					toggleSlideshow = function() {
 						slideshow.toggle();
 						toggleBtnn();
-					},
-					closeOverlay = function() {
-						classie.add( overlay, 'hide' );
 					};
 
+				$("#slideshow").animate({ opacity:1 }, 2000);;
 				// toggle between fullscreen and small slideshow
-				switchBtnn.addEventListener( 'click', toggleSlideshow );
-				// close overlay
-				overlayClose.addEventListener( 'click', closeOverlay );
+				switchBtnn.click(toggleSlideshow);
+				// display the ovelay if it's the first visit
+				if ($.cookie('newUser') == null) {
+					overlay.addClass('show');
+				};
+				// close overlay when you click the button
+				overlayClose.click(function(){
+					overlay.addClass('hide');
+					$.cookie('newUser', 'false', { expires: 7 });
+				});
 
 			}());
 		</script>

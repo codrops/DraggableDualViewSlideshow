@@ -1,0 +1,36 @@
+
+$fonts: 'Lato', Arial, sans-serif;
+$dragslider-h2-font: 'Playfair Display', serif;
+$dragslider-span-font: $fonts;
+
+/* colors */
+
+$codrop-grey: #2c3135;
+$codrop-teal: #c5d3d6;
+$codrop-dk-blue: #567076;
+$codrop-orange: #f39c12;
+$dragdealer-red: #CC0000;
+$dragdealer-grey: #898989;
+
+$slide-bg: $codrop-grey;
+$slide-color: $codrop-teal;
+$slide-cur-color: white;
+$message-color: $codrop-orange;
+$overlay-bg-color: rgba(40,49,56,0.95);
+$button-color: white;
+$button-border: $button-color;
+$red-bar-color: white;
+$red-bar-bg: $dragdealer-red;
+$dragdealer-disable-bg: $dragdealer-grey;
+$slide-bg: $codrop-dk-blue;
+$slide-h2-color: white;
+
+
+/* Image URLS */
+
+$info-drag-url: url(../img/drag.svg);
+$info-keys-url: url(../img/drag.svg);
+$info-switch-url: url(../img/drag.svg);
+$slider-button-bg: url(../img/switchmin.svg);
+$slider-switch-bg: url(../img/switchmax.svg)
+
